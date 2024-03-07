@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-ProductsCatalog.Client-B60D8AF0-4E00-42EA-84BF-7FDFF3094A90</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.14" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.14" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.27">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.14" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\ApplicationDbContextModelSnapshot.cs" />
+      <Compile Remove="Migrations\20240302074936_InitProductCatalogAndIdentity.cs" />
+      <Compile Remove="Migrations\20240302074936_InitProductCatalogAndIdentity.Designer.cs" />
+      <Compile Remove="Migrations\20240302162904_UpdateProductCatalogEntities.cs" />
+      <Compile Remove="Migrations\20240302162904_UpdateProductCatalogEntities.Designer.cs" />
+      <Compile Update="Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.ru.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\Catalog" />
+      <Folder Include="Migrations" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Catalog\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Catalog\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Catalog\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Catalog\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Catalog\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>

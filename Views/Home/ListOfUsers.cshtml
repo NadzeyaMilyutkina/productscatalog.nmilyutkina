@@ -1,0 +1,58 @@
+@inject UserManager<IdentityUser> UserManager
+@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityUser>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Resources.Users</title>
+</head>
+<body>
+
+<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">@Resources.AddaNewUser</a>
+
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                @Resources.Lockouted
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => item.LockoutEnd.HasValue)
+                </td>
+                <td>
+                    <a asp-action="ChangePassword" asp-route-id="@item.Id">@Resources.ChangePassword</a> |
+                    <a asp-action="BlockUser" asp-route-id="@item.Id">@Resources.LockoutUser</a> |
+                    <a asp-action="DeleteUser" asp-route-id="@item.Id">@Resources.DeleteUser</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

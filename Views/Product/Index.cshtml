@@ -1,0 +1,78 @@
+@using ProductsCatalog.Client.Constants
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<ProductsCatalog.Client.Domain.Product>
+
+@{
+    ViewData["Title"] = @Resources.Products;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Resources.Products</h1>
+
+<p>
+    <a asp-action="Create">@Resources.AddNew</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneralNote)
+            </th>
+            @if (User.IsInRole(Roles.Admin) || User.IsInRole(Roles.AdvancedUser))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.SpecialNote)
+                </th>
+            }
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+
+                        <span style="color: green;" onmouseover="convertToUsd(this, @item.Price)" onmouseout="cleanUp(this)">
+                            *
+                        </span>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GeneralNote.Description)
+                    </td>
+                    @if (User.IsInRole(Roles.Admin) || User.IsInRole(Roles.AdvancedUser))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SpecialNote.Description)
+                        </td>
+                    }
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">@Resources.Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">@Resources.Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">@Resources.Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

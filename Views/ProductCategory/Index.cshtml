@@ -1,0 +1,45 @@
+@model IEnumerable<ProductsCatalog.Client.Domain.ProductCategory>
+
+@{
+    ViewData["Title"] = @Resources.Categories;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Resources.Categories</h1>
+
+<p>
+    <a asp-action="Create">@Resources.AddNew</a>
+</p>
+<input type="text" id="categoriesFilter" onkeyup="filterCategories()" placeholder="@Resources.SearchCategoryByName">
+<table class="table" id="category">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Catalog.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.OrderBy(x => x.CatalogId))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Catalog.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">@Resources.Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">@Resources.Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">@Resources.Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            Каталог товаров
+        </xsd:element>
+        <xsd:element name="Add">
+            Добавить
+        </xsd:element>
+        <xsd:element name="Details">
+            Детали
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Details" xml:space="preserve">
+        <value>Детали</value>
+    </data>
+    <data name="Add" xml:space="preserve">
+        <value>Добавить</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Удалить</value>
+    </data>
+    <data name="ReturnBack" xml:space="preserve">
+        <value>Вернуться назад</value>
+    </data>
+    <data name="AreYouSureToDeleteCatalog" xml:space="preserve">
+        <value>Вы уверены, что хотите удалить данный каталог?</value>
+    </data>
+    <data name="Catalog" xml:space="preserve">
+        <value>Каталог</value>
+    </data>
+    <data name="Categories" xml:space="preserve">
+        <value>Категории</value>
+    </data>
+    <data name="NoOneCategoriesWereFound" xml:space="preserve">
+        <value>Ни одной категории не найдено</value>
+    </data>
+    <data name="Edit" xml:space="preserve">
+        <value>Редактировать</value>
+    </data>
+    <data name="Add_aNewCategory" xml:space="preserve">
+        <value>Добавить новую категорию?</value>
+    </data>
+    <data name="Catalogs" xml:space="preserve">
+        <value>Каталоги</value>
+    </data>
+    <data name="AddNew" xml:space="preserve">
+        <value>Добавить новый (-ую)</value>
+    </data>
+    <data name="WelcomeMessage" xml:space="preserve">
+        <value>Добро пожаловать в каталог товаров!</value>
+    </data>
+    <data name="NavigateToCatalogList" xml:space="preserve">
+        <value>Перейти в список каталогов</value>
+    </data>
+    <data name="NavigateToCategoriesList" xml:space="preserve">
+        <value>Перейти в список категорий товаров</value>
+    </data>
+    <data name="CatalogTitle" xml:space="preserve">
+        <value>Каталог товаров</value>
+    </data>
+    <data name="ChangePassword" xml:space="preserve">
+        <value>Изменить пароль</value>
+    </data>
+    <data name="LockoutUser" xml:space="preserve">
+        <value>Заблокировать пользователя</value>
+    </data>
+    <data name="DeleteUser" xml:space="preserve">
+        <value>Удалить</value>
+    </data>
+    <data name="AddaNewUser" xml:space="preserve">
+        <value>Добавить нового пользователя</value>
+    </data>
+    <data name="Users" xml:space="preserve">
+        <value>Пользователи</value>
+    </data>
+    <data name="Lockouted" xml:space="preserve">
+        <value>Заблокирован?</value>
+    </data>
+    <data name="Product" xml:space="preserve">
+        <value>Продукт</value>
+    </data>
+    <data name="AddaProduct" xml:space="preserve">
+        <value>Добавить продукт</value>
+    </data>
+    <data name="DeleteProduct" xml:space="preserve">
+        <value>Удаление продукта</value>
+    </data>
+    <data name="AreYouSureToDeleteProduct" xml:space="preserve">
+        <value>Вы уверены, что хотите удалить данный продукт?</value>
+    </data>
+    <data name="Products" xml:space="preserve">
+        <value>Продукты</value>
+    </data>
+    <data name="ProductCategory" xml:space="preserve">
+        <value>Категория продуктов</value>
+    </data>
+    <data name="AreYouSureToDeleteProductCategory" xml:space="preserve">
+        <value>Вы уверены, что хотите удалить данную категорию?</value>
+    </data>
+    <data name="AddaNewProduct" xml:space="preserve">
+        <value>Добавить новый продукт?</value>
+    </data>
+    <data name="NoOneProductWasFound" xml:space="preserve">
+        <value>Ни одного продукта не найдено</value>
+    </data>
+    <data name="Home" xml:space="preserve">
+        <value>Главная</value>
+    </data>
+    <data name="Privacy" xml:space="preserve">
+        <value>Управление пользователями</value>
+    </data>
+    <data name="Hello" xml:space="preserve">
+        <value>Здравствуйте, </value>
+    </data>
+    <data name="Register" xml:space="preserve">
+        <value>Регистрация</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>Войти</value>
+    </data>
+    <data name="Logout" xml:space="preserve">
+        <value>Выйти</value>
+    </data>
+    <data name="Save" xml:space="preserve">
+        <value>Сохранить</value>
+    </data>
+    <data name="SearchCategoryByName" xml:space="preserve">
+        <value>Найти по имени</value>
+    </data>
+    <data name="NavigateToProductsList" xml:space="preserve">
+        <value>Перейти в список всех товаров</value>
+    </data>
+</root>
